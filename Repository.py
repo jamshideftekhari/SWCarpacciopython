@@ -6,7 +6,6 @@ class Repository(object):
     RowsList = []
     def __init__(self):
         pass
-
     # can be made by parameter
     def Connect2DB(self):
         self.DBobject = mysql.connector.connect(
@@ -28,8 +27,6 @@ class Repository(object):
         self.DBCursor.execute("insert into discountTable (discountBase, discountValue) values (%s,%s)", (disBase, disValue))
         self.DBobject.commit()
          
-
-
 re=Repository()
 re.Connect2DB()
 print("************state values***********")

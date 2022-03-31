@@ -64,6 +64,13 @@ Cal.getDiscountValue(1900)
 Cal.getDiscountValue(5900)
 Cal.getDiscountValue(10900)
 Cal.getDiscountValue(50900)
+# discount based on price
+discountTuple = Cal.getDiscountValue(price)
+print ("discount tuple is: " + str(discountTuple.value))
+discount = price*discountTuple.value[1]/100
+print ("discount: "+ str(discount))
+print ("price with discount: "+ str(price - discount))
+
 
 # 9 - calculate total price with discount included. 
 
